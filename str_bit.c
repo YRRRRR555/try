@@ -2,11 +2,12 @@
 #include<math.h>
 #include<string.h>
 #include<stdlib.h>
-
+#define msglen 125
+unsigned char decodeByte
 char msg1_buffer[100];
 char msg2_buffer[100];
-char msg1[10] = "TEAM 2005";
-char msg2[10] = "CLASS_2020";
+// msg1 = "TEAM 2005";  9
+// msg2 = "CLASS_2020"; 10 
 char msg[15];  //chosen by button push
 int button; //button selecton
 int mode;
@@ -26,11 +27,15 @@ void selection(int selection){
     } 
 }
 int main(){
-    int i,j,k;
+    int i,j,c;
     printf("enter mode:");
     scanf("%d",&mode);
     selection(mode);
-    // printf("length = %lu \n", strlen(msg));
+    printf("length = %lu \n", strlen(msg));
     // printf("the message is %s \n",msg);
-   
+   for(i = 0; msg[i]!='\0'; i++){
+       c = msg[i]; //give a decimal number
+       printf("i c = %i\n",c);
+       printf("d c = %d\n",c);
+   }
 };
