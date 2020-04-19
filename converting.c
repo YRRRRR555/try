@@ -35,6 +35,7 @@ void dec_to_bit(unsigned char num){
 int main(){
     printf("length = %lu \n", strlen(msg));
     int i,j;
+    len=strlen(msg);
     
    for(i=0; i<strlen(msg); i++){
        printf("msg = %d\n", msg[i]);
