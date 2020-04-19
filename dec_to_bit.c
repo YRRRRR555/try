@@ -31,26 +31,9 @@ void dec_to_bit(unsigned char num){
 }
 
 
-
 int main(){
-    printf("length = %lu \n", strlen(msg));
-    int i,j;
-    
-   for(i=0; i<strlen(msg); i++){
-       printf("msg = %d\n", msg[i]);
-       mask = 0b10000000;
-       for(j=0; j<8; j++){
-           msg_buffer[i*8+j] = ((msg[i] & mask)>0);
-           mask = mask>>1;
-           printf("%d\n",mask);
-       }
-   }
-//    size_t size = sizeof(msg_buffer2);
-//    printf("\nsize is %zu\n", ii);
-
-   for(q=0; q<(len*8); q++){
-       printf("index=%d  %d\n",q,msg_buffer[q]);
-   }
-};
-
-
+    int q;
+    for(q=0; q<8; q++){
+    printf("index=%d  %d\n",q,num_buffer[q]);   
+    }
+}
